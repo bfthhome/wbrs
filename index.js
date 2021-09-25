@@ -54,8 +54,10 @@ async function writeMDFile() {
 }
 
 async function sendTgMessage(data) {
-  const ranks = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣']
-  const text = data.splice(1, 30).map((o, i) => {
+  const ranks = ['🔥1.', '🔥2.', '🔥3.', '🔥4.', '🔥5.','🔥6.', '🔥7.', '🔥8.', '🔥9.', '🔥10.','🔥11.', '🔥12.', '🔥13.', '🔥14.', '🔥15.','🔥16.', '🔥17.', '🔥18.', '🔥19.', '🔥20.','🔥21.', '🔥22.', '🔥23.', '🔥24.', '🔥25.','🔥26.', '🔥27.', '🔥28.', '🔥29.', '🔥30.','🔥31.', '🔥32.', '🔥33.', '🔥34.', '🔥35.','🔥36.', '🔥37.', '🔥38.', '🔥39.', '🔥40.', '🔥41.', '🔥42.', '🔥43.', '🔥44.', '🔥45.','🔥46.', '🔥47.', '🔥48.', '🔥49.', '🔥50.', '🔥51.', '🔥52.', '🔥53.', '🔥54.', '🔥55.','🔥56.', '🔥57.', '🔥58.', '🔥59.',]
+  const text = data.splice(1, 59).map((o, i) => {
+  // const ranks = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣']
+  // const text = data.splice(1, 30).map((o, i) => {
     const containerid = encodeURIComponent(new URL(o.scheme).searchParams.get('containerid'))
     const url = `https://m.weibo.cn/search?containerid=${containerid}`
     if (o.promotion) {
@@ -66,11 +68,12 @@ async function sendTgMessage(data) {
     }
     return `🔥 [${o.desc}](${url}) ${(o.desc_extr / 10000).toFixed(2)} 万`
   })
-  text.unshift(`${dayjs().format('YYYY-MM-DD HH:mm:ss')} 的微博热搜([查看更多](https://weibo.xiadd.me/#/hots?date=${dayjs().format('YYYY-MM-DD')}))`)
+  text.unshift(`${dayjs().format('YYYY-MM-DD HH:mm:ss')} 的微博热搜✅([查看更多](https://weibo.wbrs.me/#/hots?date=${dayjs().format('YYYY-MM-DD')}))`)
   await bot.telegram.sendMessage(CHANNEL_ID, text.join('\n'), {
     parse_mode: 'Markdown',
     disable_web_page_preview: true
   })
+  text.unshift(`${dayjs().format('YYYY-MM-DD HH:mm:ss')} 的微博热搜⭐️([查看更多](https://weibo.wbrs.me/#/hots?date=${dayjs().format('YYYY-MM-DD')}))`)
 }
 
 async function fetchTrendingDetail(title) {
