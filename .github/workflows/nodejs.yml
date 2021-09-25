@@ -1,6 +1,9 @@
 name: Weibo_schedule
 
 on:
+  repository_dispatch:
+  workflow_dispatch:
+  
   schedule:
     - cron: "0 * * * *"
 
