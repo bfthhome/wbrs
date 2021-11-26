@@ -68,7 +68,7 @@ async function sendTgMessage(data) {
     }
     return `🔥 [${o.desc}](${url}) ${(o.desc_extr / 10000).toFixed(2)} 万`
   })
-  text.unshift(`<br/> BFTHHOME-wbrs  ${dayjs().format('YYYY-MM-DD HH:mm:ss')} </br>😍最新微博热搜话题排行榜✅([查看更多](https://weibo.wbrs.me/#/hots?date=${dayjs().format('YYYY-MM-DD')})) `)
+  text.unshift(`🔸 BFTHHOME-wbrs  ${dayjs().format('YYYY-MM-DD HH:mm:ss')} \n😍最新微博热搜话题排行榜✅([查看更多](https://weibo.wbrs.me/#/hots?date=${dayjs().format('YYYY-MM-DD')})) `)
   await bot.telegram.sendMessage(CHANNEL_ID, text.join('\n'), {
     parse_mode: 'Markdown',
     disable_web_page_preview: true
