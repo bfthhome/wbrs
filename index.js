@@ -72,8 +72,10 @@ async function sendTgMessage(data) {
   await bot.telegram.sendMessage(CHANNEL_ID, text.join('\n'), {
     parse_mode: 'Markdown',
     disable_web_page_preview: true
-  })
+  }
   text.unshift(`🏄‍♂️ BFTHHOME-wbrs  ${dayjs().format('YYYY-MM-DD HH:mm:ss')} \n✅微博热搜话题🔸最新排行榜😍([查看更多](https://weibo.wbrs.me/#/hots?date=${dayjs().format('YYYY-MM-DD')})) `)
+                            
+                                )
 
   text.unshift(`🏄‍♂️ BFTHHOME-wbrs  ${dayjs().format('YYYY-MM-DD HH:mm:ss')} \n🌈微博热搜话题🔸最新排行榜⭐️([查看更多](https://weibo.wbrs.me/#/hots?date=${dayjs().format('YYYY-MM-DD')})) `)
 }
