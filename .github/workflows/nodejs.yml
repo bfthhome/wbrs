@@ -40,7 +40,15 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "WeiboHotSearch real-time update"
+          fi
           git commit -m "WeiboHotSearch real-time update"
+
+    
+
 
       - name: Push changes
         uses: ad-m/github-push-action@master
